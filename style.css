@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #55595c;
   margin: 0; /* resets the default 8px from most browsers */
@@ -46,7 +50,7 @@ body {
 
 #brands-section ul li::first-letter {
   color: #a70184;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 #brands-section ul li::marker {
@@ -141,6 +145,12 @@ body {
 }
 
 
+/* unidades */
+
+#access-buttons {
+  margin: 0 5%;
+}
+
 /* asumimos que todos los estilos que tenemos hasta este punto son para movil y funcionan como base para otros tamaños */
 
 
@@ -156,6 +166,10 @@ body {
     background-color: #55595c;
     justify-content: center;
     gap: 20px;
+  }
+
+  html {
+    font-size: 20px;
   }
 
 }
@@ -178,4 +192,29 @@ body {
     flex-direction: row;
   }
 
+  html {
+    font-size: 24px;
+  }
+
+}
+
+
+p {
+  font-size: 0.7rem; /* 70% del el font-size del html */
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
 }
