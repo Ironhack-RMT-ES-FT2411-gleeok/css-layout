@@ -6,7 +6,7 @@ body {
 
 #main-header {
   background-color: white;
-  color: #a70184;
+  /* color: #a70184; */
   padding: 5px 0; /* top&down left&right */
   margin: 20px 30px 20px 30px; /* top right down left */
 }
@@ -21,4 +21,161 @@ body {
 
 #games-section, #used-section, #brands-section, #access-buttons {
   background-color: lightgray;
+}
+
+.card img {
+  height: 180px;
+  width: 120px;
+}
+
+#access-buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+#main-header h1 span {
+  color: #a70184;
+  font-weight: bold;
+}
+
+#main-header > span {
+  /* busca todos los elementos span que esten en el primer nivel dentro del header */
+  text-decoration: underline;
+}
+
+#brands-section ul li::first-letter {
+  color: #a70184;
+  font-size: 24px;
+}
+
+#brands-section ul li::marker {
+  color: #a70184;
+  content: "👾 ";
+}
+
+#access-buttons button:hover {
+  background-color: #a70184;
+  width: 55px;
+  height: 55px;
+}
+
+#access-buttons button:active {
+  background-color: black;
+  color: white;
+}
+
+#brands-section ul li:hover::after {
+  content: " EN OFERTA";
+}
+
+/* FLEXBOX */
+
+#access-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 150px;
+  align-items: center;
+}
+
+.card {
+  background-color: #55595c;
+  height: 380px;
+  width: 200px;
+  color: white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  /* genero un tiempo de transición */
+  transition: 1s;
+}
+
+.games-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.card:hover {
+  /* width: 300px; */
+  flex-grow: 1;
+  background-color: #a70184;
+}
+
+
+#access-buttons {
+  position: sticky;
+  top: 0;
+}
+
+#access-buttons button.abajo {
+  position: relative;
+  top: 20px;
+}
+
+#access-buttons button.arriba {
+  position: relative;
+  /* top: -20px; */
+  bottom: 20px;
+}
+
+#main-header {
+  /* Esta posicion no lo hacemos porque queremos mover el header */
+  /* lo hacemos para poder posicionar el confetti en relacion al header */
+  position: relative;
+}
+
+#main-header #confetti {
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  right: 5px;
+}
+
+
+/* asumimos que todos los estilos que tenemos hasta este punto son para movil y funcionan como base para otros tamaños */
+
+
+/* media query para estilos especificos de tablets */
+
+@media (width > 500px) {
+
+  body {
+    background-color:#a70184
+  }
+
+  #access-buttons {
+    background-color: #55595c;
+    justify-content: center;
+    gap: 20px;
+  }
+
+}
+
+/* media query para estilos especificos de ordenadores */ 
+
+@media (width > 1080px) {
+
+  body {
+    background-color: antiquewhite;
+  }
+
+  #access-buttons {
+    background-color:#a70184;
+    justify-content: space-evenly;
+  }
+
+  #contenedor-responsivo {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
